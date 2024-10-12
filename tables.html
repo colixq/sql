@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <a href="sql.php" class="menu-item">
+            <span class="material-icons">storage</span> 
+            <div class="item-text">SQL</div>
+        </a>
+        <a href="tables.html" class="menu-item">
+            <span class="material-icons">table_view</span> 
+            <div class="item-text">TABLES</div>
+        </a>
+        <a href="query.html" class="menu-item">
+            <span class="material-icons">search</span> 
+            <div class="item-text">QUERY</div>
+        </a>
+        <a href="structure.html" class="menu-item">
+            <span class="material-icons">account_tree</span> 
+            <div class="item-text">STRUCTURE</div>
+        </a>
+        <a href="data.html" class="menu-item">
+            <span class="material-icons">dataset</span> 
+            <div class="item-text">DATA</div>
+        </a>
+    </div>
+
+
+    <div class="table-container">
+        <div class="table-list">
+            <div class="addTable">+</div>
+            <h2>Tables</h2>
+            <ul>
+                <li>
+                    <div class="table-name">Users</div>
+                    <div class="cross-delete" onclick="deleteTable(this)">✖</div>
+                </li>
+                <li>
+                    <div class="table-name">Orders</div>
+                    <div class="cross-delete" onclick="deleteTable(this)">✖</div>
+                </li>
+                <li>
+                    <div class="table-name">Products</div>
+                    <div class="cross-delete" onclick="deleteTable(this)">✖</div>
+                </li>
+                <li>
+                    <div class="table-name">Categories</div>
+                    <div class="cross-delete" onclick="deleteTable(this)">✖</div>
+                </li>
+                <li>
+                    <div class="table-name">Transactions</div>
+                    <div class="cross-delete" onclick="deleteTable(this)">✖</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="table-details">
+            <h2>Selected Table: Users</h2>
+            <p>Details of the selected table will be displayed here.</p>
+        </div>
+    </div>
+    <script>
+        function deleteTable(element) {
+            const li = element.parentElement;
+            li.parentElement.removeChild(li);
+        }
+    </script>
+</body>
+</html>
